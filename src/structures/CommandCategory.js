@@ -12,11 +12,11 @@ module.exports = {
     image: "https://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Settings-icon.png",
     emoji: "🤖",
   },
-  ANIME: {
-    name: "Anime",
-    image: "https://wallpaperaccess.com/full/5680679.jpg",
-    emoji: "🎨",
-  },
+  // ANIME: {
+  //   name: "Anime",
+  //   image: "https://wallpaperaccess.com/full/5680679.jpg",
+  //   emoji: "🎨",
+  // },
   ECONOMY: {
     name: "Economy",
     enabled: config.ECONOMY.ENABLED,
