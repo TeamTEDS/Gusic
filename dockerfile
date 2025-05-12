@@ -1,5 +1,5 @@
 # Base image
-FROM node:18-alpine
+FROM oven/bun:alpine
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -29,4 +29,4 @@ ENV SPOTIFY_CLIENT_SECRET=
 EXPOSE 8080
 
 # Define the command to run your Node.js application
-CMD [ "node", "bot.js" ]
+CMD [ "bun", "bot.js" ]
