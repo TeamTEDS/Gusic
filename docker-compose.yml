@@ -12,8 +12,10 @@ services:
       - ./logs:/usr/src/app/logs:rw
     env_file: ".env"
     depends_on:
-      - lavalink
-      - mongodb
+      lavalink:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
 
   lavalink:
     image: fredboat/lavalink:dev
@@ -24,6 +26,11 @@ services:
       - discord-js-net
     volumes:
       - ./application.yml:/opt/Lavalink/application.yml:ro
+    healthcheck:
+      test: 'echo lavalink'
+      interval: 10s
+      timeout: 10s
+      retries: 3
 
   mongodb:
     image: mongo:latest
