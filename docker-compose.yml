@@ -10,6 +10,10 @@ services:
     volumes:
       - ./config.js:/usr/src/app/config.js:ro
       - ./logs:/usr/src/app/logs:rw
+    env_file: ".env"
+    depends_on:
+      - lavalink
+      - mongodb
 
   lavalink:
     image: fredboat/lavalink:dev
