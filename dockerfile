@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install only production dependencies
-RUN bun ci --omit=dev
+RUN bun install --omit=dev
 
 # Bundle rest of the source code
 COPY . .
