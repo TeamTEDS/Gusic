@@ -3,7 +3,7 @@ version: "4"
 services:
   discord-js-bot:
     image: dovydasteds/gusic-discord-bot
-    build: ./dockerfile
+    build: ./
     container_name: discord-js-bot
     restart: unless-stopped
     networks:
