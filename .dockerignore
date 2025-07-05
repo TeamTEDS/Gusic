@@ -7,3 +7,4 @@ docs/
 *.tar.gz
 *.tar
 .env
+data/

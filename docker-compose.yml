@@ -18,7 +18,7 @@ services:
         condition: service_started
 
   lavalink:
-    image: fredboat/lavalink:dev
+    image: fredboat/lavalink:3.7.13
     container_name: discord-js-lavalink
     hostname: lavalink
     restart: unless-stopped
